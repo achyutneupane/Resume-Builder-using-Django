@@ -25,7 +25,7 @@ class PersonalInfo(models.Model):
 
 
 class EducationalInfo(models.Model):
-    personalinfo = models.ForeignKey(PersonalInfo, on_delete=models.CASCADE)
+    personalinfo = models.ForeignKey(PersonalInfo,  on_delete=models.CASCADE)
     program = models.CharField(max_length=255)
     institution = models.CharField(max_length=100)
     course = models.BooleanField(default=0)

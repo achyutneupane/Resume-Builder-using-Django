@@ -3,6 +3,8 @@ from . import views
 urlpatterns = [
     path('', views.index, name = 'home'),
     path('createresume', views.resumeForm, name='resumeform'),
+    path('apilist', views.apilist, name='apilist'),
     path('templates/<id>',views.templates,name='templates'),
-    path('pdf/<id>', views.generate_view, name='pdf'),
+
+    path('pdf_view/<id>', views.ViewPDF.as_view(), name="pdf_view"),
     ]

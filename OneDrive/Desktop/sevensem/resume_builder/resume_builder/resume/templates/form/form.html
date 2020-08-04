@@ -3,192 +3,235 @@
 {% load static %}
 <body class="bg-gradient-primary">
 
-  <div class="container-fluid">
+<div class="container-fluid">
 
     <div class="card o-hidden border-0 shadow-lg my-5">
-      <div class="card-body p-0">
-        <!-- Nested Row within Card Body -->
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="p-5">
-              <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Create a Resume!</h1>
-              </div>
-                 <form>
-                     <h1 class="h4 text-gray-900 mb-4">Personal Info</h1>
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="firstname" placeholder="First Name">
-            </div>
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="middlename" placeholder="Middle Name">
-            </div>
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="lastname" placeholder="Last Name">
-            </div>
-         </div>
-        <div class="form-row">
-        <div class="form-group col-md-7">
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        </div>
-
-        <div class="form-group col-md-5">
-          <input type="text" class="form-control" id="inputphone" placeholder="Phone Number">
-
-        </div>
-      </div>
-        <div class="form-row">
-           <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="inputAddress" placeholder="Enter country">
-            </div>
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" placeholder="state" id="inputstate">
-            </div>
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control"  placeholder="city" id="inputcity">
-            </div>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group col-md-4">
-             <label >DOB</label>
-             <input type="Date" class="form-control"  placeholder="Date of birth">
-            </div>
-
-            <div class="form-groupcol-md-4">
-                <label for="inputdateofbirth">Gender</label>
-                <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                      <label class="form-check-label" for="inlineRadio1" style="color: #35475e">Female</label>
-                </div>
-                <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                      <label class="form-check-label" for="inlineRadio2" style="color: #35475e">Male</label>
-                </div>
-                <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                      <label class="form-check-label" for="inlineRadio3" style="color: #35475e">Other</label>
-                </div>
-            </div>
-        </div>
-            <hr>
-  <h1 class="h4 text-gray-900 mb-4">Education</h1>
-
-           <div class="form-row">
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="studyprogram" placeholder="Study Program">
-            </div>
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="institution" placeholder="Name of institution">
-            </div>
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="course" placeholder="Course, thesis, project">
-            </div>
-         </div>
-          <div class="form-row">
-
-            <div class="form-group col-md-4">
-                <label >Starting Date </label>
-                <input type="Date" class="form-control"  placeholder="started date: " id="inputdateofbirth">
-            </div>
-            <div class="form-group col-md-4">
-                <label >Ending Date </label>
-                <input type="Date" class="form-control"  placeholder="Ended/ending Date: " id="inputdateofbirth">
-            </div>
-
-            <div class="form-group col-md-4">
-                <label >Location </label>
-                <input type="text" class="form-control" id="course" placeholder="City, Country">
-            </div>
-         </div>
-          <button type="button" class="btn btn-sm btn-success add-form-row" id="{{ formset.prefix }}">
-          <i class="fas fa-plus"></i>  Add Education
-          </button>
-
-          <hr>
-          <h1 class="h4 text-gray-900 mb-4">Working Experience </h1>
-
-           <div class="form-row">
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="wokinginstitution" placeholder="Company/Workplace">
-            </div>
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="institution" placeholder="Title/ Position">
-            </div>
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="course" placeholder="Course, thesis, project">
-            </div>
-         </div>
-          <div class="form-row">
-            <div class="form-group col-md-4">
-                <input type="Date" class="form-control"  placeholder="started date: " id="inputdateofbirth">
-            </div>
-            <div class="form-group col-md-4">
-                <input type="Date" class="form-control"  placeholder="Ended/ending Date: " id="inputdateofbirth">
-            </div>
-
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="course" placeholder="City, Country">
-            </div>
-         </div>
-
-        <div class="form-group">
-            <label for="Experience">Experience : </label>
-           <textarea rows="4" cols="50"  class="form-control" name="comment" form="usrform"> Enter text here...</textarea>
-        </div>
-
-         <button class="btn btn-danger"><i class="fas fa-plus"></i> Add Experience </button>
-          <hr>
-  <h1 class="h4 text-gray-900 mb-4">Skills</h1>
-           <div class="form-group">
-               <input type="text" class="form-control" id="institution" placeholder="Enter skill and sepeate by ,">
-          </div>
-          <hr>
-
-  <h1 class="h4 text-gray-900 mb-4">Certificates:</h1>
-           <div class="form-row">
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="course" placeholder="Certificates Name">
-            </div>
-            <div class="form-group col-md-4">
-                <input type="Date" class="form-control"  placeholder="started date: " id="inputdateofbirth">
-            </div>
-            <div class="form-group col-md-4">
-                <input type="Date" class="form-control"  placeholder="Ended/ending Date: " id="inputdateofbirth">
-            </div>
-         </div>
-         <button class="btn btn-danger"><i class="fas fa-plus"></i> Add Certificates </button>
-         <hr>
-  <h1 class="h4 text-gray-900 mb-4">Language</h1>
-          <div class="form-row">
-         <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="course" placeholder="Language">
-            </div>
-             <div class="form-group col-md-4">
-              <button class="btn btn-danger"><i class="fas fa-plus"></i> Add Language</button>
-           </div>
-         </div>
-         <hr>
-  <h1 class="h4 text-gray-900 mb-4">Interest</h1>
-           <div class="form-group">
-           <textarea rows="4" cols="50"  class="form-control" name="comment" form="usrform"> Enter text here...</textarea>
-        </div>
-     <button type="submit" class="btn btn-success"><i class="fas fa-file-alt"></i> Create Resume </button>
-</form>
-              <hr>
-            </div>
-          </div>
-            <div class="col-lg-5 d-none d-lg-block">
+        <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+                <div class="col-lg-6">
                     <div class="p-5">
-                      <div class="text-center">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Create a Resume!</h1>
+                        </div>
 
-                      </div>
+                        <h1 class="h4 text-gray-900 mb-4">Personal Info</h1>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    {{form.firstname}}
+                                </div>
+                                <div class="form-group col-md-4">
+                                    {{form.middlename}}
+                                </div>
+                                <div class="form-group col-md-4">
+                                    {{form.lastname}}
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-7">
+                                    {{form.email}}
+                                </div>
+                                <div class="form-group col-md-5">
+                                    {{form.phone}}
+
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    {{form.country}}
+                                </div>
+                                <div class="form-group col-md-4">
+                                    {{form.state}}
+                                </div>
+                                <div class="form-group col-md-4">
+                                    {{form.city}}
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-5">
+                                    <label>DOB</label>
+                                    {{form.dob}}
+                                </div>
+
+                                <div class="form-groupcol-md-6 m-2">
+                                    <label>Gender </label>
+                                    {{form.gender}}
+                                </div>
+                            </div>
+                            <hr>
+                            <h1 class="h4 text-gray-900 mb-4">Education</h1>
+                            {{ formset.management_form }}
+                            {%for eduinfo in formset %}
+                            <div class="education" >
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        {{eduinfo.program}}
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        {{eduinfo.institution}}
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        {{eduinfo.course}}
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label>Starting Date </label>
+                                        {{eduinfo.edate1}}
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label>Ending Date </label>
+                                        {{eduinfo.edate2}}
+                                    </div>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-danger btn-sm remove-form-row"
+                                            id="{{ formset.prefix }}">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <button  type="button" class="btn btn-sm btn-success add-form-row"
+                                    id="{{ formset.prefix }}">
+                                <i class="fas fa-plus"></i> Add Education
+                            </button>
+                            <hr>
+
+                            <hr>
+                            <h1 class="h4 text-gray-900 mb-4">Working Experience </h1>
+                            {{ experienceform.management_form }}
+                            {% for experience in experienceform%}
+                            <div class="experience">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        {{experience.company}}
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        {{experience.title}}
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        {{experience.course}}
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        {{experience.startingDate}}
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        {{experience.endingDate}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Experience">Experience : </label>
+                                    {{experience.experienceInfo}}
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-danger btn-sm remove-form-row"
+                                            id="{{ experienceform.prefix }}">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                            <button type="button" class="btn btn-sm btn-success add-form-row"
+                                    id="{{ experienceform.prefix }}">
+                                <i class="fas fa-plus"></i> Add Experience
+                            </button>
+                            <hr>
+                            <h1 class="h4 text-gray-900 mb-4">Skills</h1>
+                            {{ skillform.management_form }}
+                            {% for skills in skillform %}
+                            <div class="skill">
+                                <div class="form-group">
+                                    {{skills.skill}}
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-danger btn-sm remove-form-row"
+                                            id="{{ skillform.prefix }}">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <button type="button" class="btn btn-sm btn-success add-form-row"
+                                    id="{{ skillform.prefix }}">
+                                <i class="fas fa-plus"></i> Add Skills
+                            </button>
+                            <hr>
+
+                            <h1 class="h4 text-gray-900 mb-4">Certificates:</h1>
+                            {{ certificateform.management_form }}
+                            {% for certicate in certificateform%}
+                            <div class="certificate">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        {{certicate.certificate}}
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        {{certicate.certificateDate}}
+                                    </div>
+                                </div>
+                                  <div>
+                                    <button type="button" class="btn btn-danger btn-sm remove-form-row"
+                                            id="{{ certificateform.prefix }}">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <button type="button" class="btn btn-sm btn-success add-form-row"
+                                    id="{{ certificateform.prefix }}">
+                                <i class="fas fa-plus"></i> Add Experience
+                            </button>
+                            <hr>
+                            <h1 class="h4 text-gray-900 mb-4">Language</h1>
+
+                            <div class="form-row">
+                                {{ languageform.management_form }}
+                                {% for language in languageform %}
+                                <div class="language">
+                                    <div class="form-group">
+                                        {{language.language}}
+                                    </div>
+                                    <div>
+                                    <button type="button" class="btn btn-danger btn-sm remove-form-row"
+                                            id="{{ languageform.prefix }}">
+                                        Delete
+                                    </button>
+                                </div>
+                                </div>
+                                {% endfor %}
+                                <div class="form-group col-md-4">
+                                    <button type="button" class="btn btn-sm btn-success add-form-row"
+                                            id="{{ languageform.prefix }}">
+                                        <i class="fas fa-plus"></i> Add Experience
+                                    </button>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <input type="submit" class="btn btn-success" name="submit">
+                            <!--     <button type="submit" class="btn btn-success"><i class="fas fa-file-alt"></i> Create Resume </button>-->
+                        </form>
+                        <hr>
                     </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="p-5">
+                        <div class="text-center">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
     </div>
 
-  </div>
-
+</div>
+<script type="text/javascript" src="{% static 'js/formset.js' %}"></script>
 {%endblock%}

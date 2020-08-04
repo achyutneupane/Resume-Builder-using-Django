@@ -44,11 +44,11 @@ class EducationalForm(forms.ModelForm):
         widgets = {
 
             'program': forms.TextInput(
-                attrs={'class': 'form-control', 'required': 'required', 'placeholder': "Enter program"}),
+                attrs={'class': 'form-control', 'placeholder': "Enter program"}),
             'institution': forms.TextInput(
-                attrs={'class': 'form-control ', 'required': 'required', 'placeholder': "Enter Institution "}),
+                attrs={'class': 'form-control ', 'placeholder': "Enter Institution "}),
             'course': forms.TextInput(
-                attrs={'class': 'form-control ', 'required': 'required', 'placeholder': "Enter Course"}),
+                attrs={'class': 'form-control ','placeholder': "Enter Course"}),
             'edate1': forms.SelectDateWidget(years=YEARS,
                                              attrs={'class': 'form-control', 'placeholder': "Date of edate1"}),
             'edate2': forms.SelectDateWidget(years=YEARS,
@@ -65,17 +65,17 @@ class ExperienceForm(forms.ModelForm):
         widgets = {
 
             'company': forms.TextInput(
-                attrs={'class': 'form-control', 'required': 'required', 'placeholder': "Enter Company"}),
+                attrs={'class': 'form-control', 'placeholder': "Enter Company"}),
             'title': forms.TextInput(
-                attrs={'class': 'form-control ', 'required': 'required', 'placeholder': "Enter Job Title "}),
+                attrs={'class': 'form-control ','placeholder': "Enter Job Title "}),
             'course': forms.TextInput(
-                attrs={'class': 'form-control ', 'required': 'required', 'placeholder': "Enter Course / Project"}),
+                attrs={'class': 'form-control ', 'placeholder': "Enter Course / Project"}),
             'startingDate': forms.SelectDateWidget(years=YEARS,
                                                    attrs={'class': 'form-control', 'placeholder': "Date of Birth"}),
             'endingDate': forms.SelectDateWidget(years=YEARS,
                                                  attrs={'class': 'form-control', 'placeholder': "Date of Birth"}),
             'experienceInfo': forms.Textarea(
-                attrs={'class': 'form-control', 'required': 'required', 'placeholder': "Enter Company"}),
+                attrs={'class': 'form-control', 'placeholder': "Enter Company"}),
         }
 
 
@@ -87,7 +87,7 @@ class SkillForm(forms.ModelForm):
         widgets = {
 
             'skill': forms.TextInput(
-                attrs={'class': 'form-control', 'required': 'required', 'placeholder': "Skills seperated by comma , "})
+                attrs={'class': 'form-control', 'placeholder': "Skills seperated by comma , "})
         }
 
 
@@ -98,7 +98,7 @@ class CertificateForm(forms.ModelForm):
         widgets = {
 
             'certificate': forms.TextInput(
-                attrs={'class': 'form-control', 'required': 'required', 'placeholder': "Certificate Name "}),
+                attrs={'class': 'form-control','placeholder': "Certificate Name "}),
             'certificateDate': forms.SelectDateWidget(years=YEARS,
                                                  attrs={'class': 'form-control', 'placeholder': "Certiciate issued Date"}),
         }
@@ -111,5 +111,5 @@ class LanguageForm(forms.ModelForm):
         widgets = {
 
             'language': forms.TextInput(
-                attrs={'class': 'form-control', 'required': 'required', 'placeholder': "Language"})
+                attrs={'class': 'form-control', 'placeholder': "Language"})
         }
